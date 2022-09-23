@@ -30,6 +30,7 @@
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto; 
+    border: .5px solid #E8E8E8;
 }
 
 .ligueOne__data {
@@ -46,6 +47,7 @@
     width: 8rem;
     padding: 1rem 5rem .5rem 5rem;
     font-weight: 500;
+    border-bottom: 1px solid #E8E8E8;
   
 }
 
