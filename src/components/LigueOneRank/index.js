@@ -32,7 +32,7 @@ function LigueOne() {
             <div className="ligueOne__container">
                 <div className="ligueOne__title">  
                     <img className="img__title" src="https://media.api-sports.io/football/leagues/61.png" alt="Ligue 1 logo"/>
-                    <h2>Ligue 1</h2>
+                    <h2 className="ligueOne__group">Ligue 1</h2>
                 </div>
                 <table className="ligueOne__table">
                     <thead>
@@ -115,7 +115,6 @@ function LigueOne() {
                              </td>
                         </tr>
                         ))}
-                       
                     </tbody>
                 </table>
             </div>
