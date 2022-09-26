@@ -1,0 +1,72 @@
+.scorersRank{
+    width: 100%;
+    height: 80vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.scorersRank__container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scorersRank__title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.scorersRank__table {
+    min-width: 88%; 
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border: .5px solid #E8E8E8;
+}
+
+.scorersRank__data {
+    height: 60px;
+    padding: 10px 20px;
+    background-color: #7306c7;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.scorersRank__standings {
+
+}
+
+.scorersRank__elements {
+
+}
+
+.scorersRank__picture{
+
+}
+
+.scorersRank__img{
+
+}
+
+.scorersRank__info{
+
+}
+
+.scorersRank__descriptions{
+
+}
+
+.scorersRank__rate{
+
+}
+
+.scorersRank__rating{
+
+}
+
+.scorersRank__goals {
+
+}

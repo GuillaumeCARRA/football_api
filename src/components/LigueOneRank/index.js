@@ -1,17 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
+import ScorersRank from '../../components/ScorersRank';
+
 import "./ligueOne.css"
 
 
-function LigueOne() {
+
+function LigueOne({league, season}) {
     
+    const [club, setClub] = useState('61');
+    const [year, setYear] = useState('2022');
+   
     const [data, setData] = useState([]);
     console.log( data);
 
     const options = {
         method: 'get',
-        url: 'https://v3.football.api-sports.io/standings?league=61&season=2022',
+        url: `https://v3.football.api-sports.io/standings?league=${league}&season=${season}`,
         headers: {
             'x-rapidapi-key': `5b9349fff44ec05a5ae1c6ff2986fe56`,
             'x-rapidapi-host': 'v3.football.api-sports.io'
@@ -118,8 +124,12 @@ function LigueOne() {
                     </tbody>
                 </table>
             </div>
+            <ScorersRank seasons={year} leagues={club}/>
         </div>
+        
     )
 }
+
+
 
 export default LigueOne;

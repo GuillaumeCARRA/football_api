@@ -9,7 +9,7 @@ function NavBar() {
                     <ul className="navbar__list">
                         <li className="navbar__item">
                             <a
-                                href="/ligue1"
+                                href="/"
                                 className="navbar__link"
                             >
                                 Ligue 1
