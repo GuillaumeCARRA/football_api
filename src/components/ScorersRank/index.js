@@ -53,11 +53,11 @@ function ScorersRank({seasons, leagues}) {
                                 </div>
                                 <div className="scorersRank__info">
                                     <div className="scorersRank__descriptions">
-                                        <p>{datas.player.firstname} {datas.player.lastname}, {datas.player.age}</p>
+                                        <p>{datas.player.firstname} {datas.player.lastname}, {datas.player.age} ans</p>
                                     </div>
                                     <div className="scorersRank__rate">
                                         Note
-                                        <span className="scorersRank__rating">{datas.statistics[0].games.rating}</span>
+                                        <span className="scorersRank__rating">{Number(datas.statistics[0].games.rating).toFixed(2)}</span>
                                     </div>
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
     width: 100%;
     height: 80vw;
     font-family: 'Poppins', sans-serif;
+    margin-top: 150px;
 }
 
 .scorersRank__container {
@@ -16,6 +17,7 @@
     display: flex;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
 }
 
 .scorersRank__table {
@@ -23,7 +25,6 @@
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    border: .5px solid #E8E8E8;
 }
 
 .scorersRank__data {
@@ -36,37 +37,56 @@
 }
 
 .scorersRank__standings {
-
+    padding: 1.2rem 5.3rem .5rem 5.3rem;
+    font-weight: 500;
+    border-bottom: 2px solid #E8E8E8;
+    font-size: 1.05rem;
 }
 
 .scorersRank__elements {
-
+    display: flex;
+    align-items: center;
 }
 
 .scorersRank__picture{
-
+   width: 12rem;
+   height: 8rem;
 }
 
 .scorersRank__img{
-
+    width: 65%;
+    border-radius: 50%;
+    border: 2px solid  #E8E8E8;
 }
 
-.scorersRank__info{
-
-}
+/* .scorersRank__info{
+ 
+} */
 
 .scorersRank__descriptions{
-
+    font-size: 1.05rem;
+    font-weight: 700;
 }
 
 .scorersRank__rate{
-
+    margin-top: 2rem;
+    line-height: 1.5rem;
+    font-weight: 400;
 }
 
 .scorersRank__rating{
-
+    margin-left: 1rem;
+    padding: .5rem .5rem .5rem .5rem;
+    border-radius: 50%;
+    border: 2px dashed #7306c7;
 }
 
-.scorersRank__goals {
+.scorersRank__team{
+    width: 4.5rem;
+}
 
+.scorersRank__goals{
+    font-weight: 500;
+    color: #7306c7;
+    font-size: 1.4rem;
 }

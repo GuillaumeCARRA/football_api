@@ -17,8 +17,33 @@ import './App.css';
 
 function App() {
 
+  /* LIGUE 1 */
   const [league, setLeague] = useState('61');
   const [season, setSeason] = useState('2022');
+
+  /* D1 FEMININE */
+  const [leagueW, setLeagueW] = useState('64');
+  const [seasonW, setSeasonW] = useState('2022');
+
+  /* PREMIER LEAGUE */
+  const [leagueP, setLeagueP] = useState('39');
+  const [seasonP, setSeasonP] = useState('2022');
+
+  /* BUNDESLIGA */
+  const [leagueB, setLeagueB] = useState('78');
+  const [seasonB, setSeasonB] = useState('2022');
+
+  /* LALIGA */
+  const [leagueLG, setLeagueLG] = useState('140');
+  const [seasonLG, setSeasonLG] = useState('2022');
+
+  /* SERIE A */
+  const [leagueS, setLeagueS] = useState('135');
+  const [seasonS, setSeasonS] = useState('2022');
+
+  /* PRIMEIRA LIGA */
+  const [leaguePT, setLeaguePT] = useState('94');
+  const [seasonPT, setSeasonPT] = useState('2022');
 
   return (
     <BrowserRouter>
@@ -34,15 +59,60 @@ function App() {
               /> 
             }
           />
-          <Route exact path='/d1feminine' element={<WomenRank />} />
-          <Route exactpath='/premierleague' element={<PremierLeague />} />
-          <Route exact path='/bundesliga' element={<Bundesliga />} />
-          <Route exact path='/laliga' element={<LaLiga />} />
-          <Route exact path='/seriea' element={<SerieA />} />
-          <Route exact path ='/primeiraliga' element={<PrimeiraLiga />} />
-         {/*  <AssistsRank />
-          <YellowCardsRank />
-          <RedCardsRank /> */}
+          <Route 
+            exact path='/d1feminine' 
+            element={
+              <WomenRank 
+                league={leagueW}
+                season={seasonW}
+              />
+            } 
+          />
+          <Route 
+            exact path='/premierleague' 
+            element={
+              <PremierLeague 
+                league={leagueP}
+                season={seasonP}
+              />
+            } 
+          />
+          <Route 
+            exact path='/bundesliga' 
+            element={
+              <Bundesliga 
+                league={leagueB}
+                season={seasonB}
+              />
+            } 
+          />
+          <Route 
+            exact path='/laliga' 
+            element={
+              <LaLiga 
+                league={leagueLG}
+                season={seasonLG}
+              />
+            } 
+          />
+          <Route 
+            exact path='/seriea' 
+              element={
+              <SerieA 
+                league={leagueS}
+                season={seasonS}
+              />
+            } 
+          />
+          <Route 
+            exact path ='/primeiraliga' 
+            element={
+              <PrimeiraLiga 
+                league={leaguePT}
+                season={seasonPT}
+              />
+            } 
+          />
         </Routes>
       </div>
     </BrowserRouter>
