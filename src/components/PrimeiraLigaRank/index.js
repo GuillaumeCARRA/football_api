@@ -2,8 +2,11 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 import ScorersRank from '../../components/ScorersRank';
+import AssistsRank from '../AssistsRank';
+import CardsRank from '../CardsRank';
 
 import './primeiraLiga.css'
+
 
 function PrimeiraLiga({league, season}) {
 
@@ -24,7 +27,7 @@ function PrimeiraLiga({league, season}) {
       
     useEffect(() => {
         axios(options).then(function (response) {
-            console.log('je suis la data', response.data.response[0].league.standings[0]);
+            console.log('je suis la data', response.data.response[0]);
             setData(response.data.response[0].league.standings[0])
         }).catch(function (error) {
             console.error(error);
@@ -33,89 +36,89 @@ function PrimeiraLiga({league, season}) {
 
 
     return (
-        <div className="ligueOne">
-        <div className="ligueOne__container">
-            <div className="ligueOne__title">  
-                <img className="img__title" src="https://media.api-sports.io/football/leagues/94.png" alt="Ligue 1 logo"/>
-                <h2 className="ligueOne__group">Primeira Liga</h2>
+        <div className="primeiraLiga">
+        <div className="primeiraLiga__container">
+            <div className="primeiraLiga__title">  
+                <img className="img__title" src="https://media.api-sports.io/football/leagues/94.png" alt="Primeira Liga logo"/>
+                <h2 className="primeiraLiga__group">Primeira Liga</h2>
             </div>
-            <table className="ligueOne__table">
+            <table className="primeiraLiga__table">
                 <thead>
                     <tr>
-                        <th className="ligueOne__data">classement 2022-23</th>
-                        <th className="ligueOne__data">club</th>
-                        <th className="ligueOne__data">mj</th>
-                        <th className="ligueOne__data">g</th>
-                        <th className="ligueOne__data">n</th>
-                        <th className="ligueOne__data">p</th>
-                        <th className="ligueOne__data">bp</th>
-                        <th className="ligueOne__data">bc</th>
-                        <th className="ligueOne__data">db</th>
-                        <th className="ligueOne__data">pts</th>
-                        <th className="ligueOne__data">forme</th>
+                        <th className="primeiraLiga__data">classement 2022-23</th>
+                        <th className="primeiraLiga__data">club</th>
+                        <th className="primeiraLiga__data">mj</th>
+                        <th className="primeiraLiga__data">g</th>
+                        <th className="primeiraLiga__data">n</th>
+                        <th className="primeiraLiga__data">p</th>
+                        <th className="primeiraLiga__data">bp</th>
+                        <th className="primeiraLiga__data">bc</th>
+                        <th className="primeiraLiga__data">db</th>
+                        <th className="primeiraLiga__data">pts</th>
+                        <th className="primeiraLiga__data">forme</th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((datas ) =>(
                         <tr key={datas.team.id}>
-                        <td className="ligueOne__standings">
-                            <div className="ligueOne__items">
-                                <div className="ligueOne__rank">
+                        <td className="primeiraLiga__standings">
+                            <div className="primeiraLiga__items">
+                                <div className="primeiraLiga__rank">
                                     <p>{datas.rank}</p>
                                 </div>
-                                <div className="ligueOne__logo">
-                                    <img className="ligueOne__img" src={datas.team.logo} alt={datas.team.name}  />
+                                <div className="primeiraLiga__logo">
+                                    <img className="primeiraLiga__img" src={datas.team.logo} alt={datas.team.name}  />
                                 </div>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.team.name}</p>
+                                <p className="primeiraLiga__info">{datas.team.name}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.all.played}</p>
+                                <p className="primeiraLiga__info">{datas.all.played}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.all.win}</p>
+                                <p className="primeiraLiga__info">{datas.all.win}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.all.draw}</p>
+                                <p className="primeiraLiga__info">{datas.all.draw}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.all.lose}</p>
+                                <p className="primeiraLiga__info">{datas.all.lose}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.all.goals.for}</p>
+                                <p className="primeiraLiga__info">{datas.all.goals.for}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.all.goals.against}</p>
+                                <p className="primeiraLiga__info">{datas.all.goals.against}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.goalsDiff}</p>
+                                <p className="primeiraLiga__info">{datas.goalsDiff}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.points}</p>
+                                <p className="primeiraLiga__info">{datas.points}</p>
                             </div>
                         </td>
-                        <td className="ligueOne__standings">
+                        <td className="primeiraLiga__standings">
                             <div>
-                                <p className="ligueOne__info">{datas.form}</p>
+                                <p className="primeiraLiga__info">{datas.form}</p>
                             </div>
                          </td>
                     </tr>
@@ -124,6 +127,8 @@ function PrimeiraLiga({league, season}) {
             </table>
         </div>
         <ScorersRank seasons={year} leagues={club}/>
+        <AssistsRank seasons={year} leagues={club} />
+        <CardsRank seasons={year} leagues={club} />
     </div>
     )
 }

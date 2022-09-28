@@ -42,6 +42,15 @@
     text-transform: uppercase;
 }
 
+.ligueOne__info--win {
+    color: #008000
+}
+/* .ligueOne__info--draw {
+    
+} */
+.ligueOne__info--lose {
+    color: #ff0000
+}
 
 .ligueOne__standings {
     width: 8rem;

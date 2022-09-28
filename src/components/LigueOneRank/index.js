@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 import ScorersRank from '../../components/ScorersRank';
+import AssistsRank from '../AssistsRank';
+import CardsRank from '../CardsRank';
 
 import "./ligueOne.css"
 
@@ -81,7 +83,7 @@ function LigueOne({league, season}) {
                             </td>
                             <td className="ligueOne__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.win}</p>
+                                    <p className="ligueOne__info--win">{datas.all.win}</p>
                                 </div>
                             </td>
                             <td className="ligueOne__standings">
@@ -91,7 +93,7 @@ function LigueOne({league, season}) {
                             </td>
                             <td className="ligueOne__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.lose}</p>
+                                    <p className="ligueOne__info--lose">{datas.all.lose}</p>
                                 </div>
                             </td>
                             <td className="ligueOne__standings">
@@ -125,8 +127,9 @@ function LigueOne({league, season}) {
                 </table>
             </div>
             <ScorersRank seasons={year} leagues={club}/>
-        </div>
-        
+            <AssistsRank seasons={year} leagues={club} />
+            <CardsRank seasons={year} leagues={club}/>
+        </div>   
     )
 }
 

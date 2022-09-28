@@ -2,8 +2,11 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
 import ScorersRank from '../../components/ScorersRank';
+import AssistsRank from '../AssistsRank';
+import CardsRank from '../CardsRank';
 
-import './laLiga.css'
+import './laLiga.css';
+
 
 
 function LaLiga({league, season}) {
@@ -33,90 +36,89 @@ function LaLiga({league, season}) {
     }, [])
 
     return (
-        <div>
-            <div className="ligueOne">
-            <div className="ligueOne__container">
-                <div className="ligueOne__title">  
-                    <img className="img__title" src="https://media.api-sports.io/football/leagues/140.png" alt="Ligue 1 logo"/>
-                    <h2 className="ligueOne__group">LaLiga</h2>
+        <div className="laLiga">
+            <div className="laLiga__container">
+                <div className="laLiga__title">  
+                    <img className="img__title" src="https://media.api-sports.io/football/leagues/140.png" alt="LaLiga logo"/>
+                    <h2 className="laLiga__group">LaLiga</h2>
                 </div>
-                <table className="ligueOne__table">
+                <table className="laLiga__table">
                     <thead>
                         <tr>
-                            <th className="ligueOne__data">classement 2022-23</th>
-                            <th className="ligueOne__data">club</th>
-                            <th className="ligueOne__data">mj</th>
-                            <th className="ligueOne__data">g</th>
-                            <th className="ligueOne__data">n</th>
-                            <th className="ligueOne__data">p</th>
-                            <th className="ligueOne__data">bp</th>
-                            <th className="ligueOne__data">bc</th>
-                            <th className="ligueOne__data">db</th>
-                            <th className="ligueOne__data">pts</th>
-                            <th className="ligueOne__data">forme</th>
+                            <th className="laLiga__data">classement 2022-23</th>
+                            <th className="laLiga__data">club</th>
+                            <th className="laLiga__data">mj</th>
+                            <th className="laLiga__data">g</th>
+                            <th className="laLiga__data">n</th>
+                            <th className="laLiga__data">p</th>
+                            <th className="laLiga__data">bp</th>
+                            <th className="laLiga__data">bc</th>
+                            <th className="laLiga__data">db</th>
+                            <th className="laLiga__data">pts</th>
+                            <th className="laLiga__data">forme</th>
                         </tr>
                     </thead>
                     <tbody>
                         {data.map((datas ) =>(
                             <tr key={datas.team.id}>
-                            <td className="ligueOne__standings">
-                                <div className="ligueOne__items">
-                                    <div className="ligueOne__rank">
+                            <td className="laLiga__standings">
+                                <div className="laLiga__items">
+                                    <div className="laLiga__rank">
                                         <p>{datas.rank}</p>
                                     </div>
-                                    <div className="ligueOne__logo">
-                                        <img className="ligueOne__img" src={datas.team.logo} alt={datas.team.name}  />
+                                    <div className="laLiga__logo">
+                                        <img className="laLiga__img" src={datas.team.logo} alt={datas.team.name}  />
                                     </div>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.team.name}</p>
+                                    <p className="laLiga__info">{datas.team.name}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.played}</p>
+                                    <p className="laLiga__info">{datas.all.played}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.win}</p>
+                                    <p className="laLiga__info">{datas.all.win}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.draw}</p>
+                                    <p className="laLiga__info">{datas.all.draw}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.lose}</p>
+                                    <p className="laLiga__info">{datas.all.lose}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.goals.for}</p>
+                                    <p className="laLiga__info">{datas.all.goals.for}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.all.goals.against}</p>
+                                    <p className="laLiga__info">{datas.all.goals.against}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.goalsDiff}</p>
+                                    <p className="laLiga__info">{datas.goalsDiff}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.points}</p>
+                                    <p className="laLiga__info">{datas.points}</p>
                                 </div>
                             </td>
-                            <td className="ligueOne__standings">
+                            <td className="laLiga__standings">
                                 <div>
-                                    <p className="ligueOne__info">{datas.form}</p>
+                                    <p className="laLiga__info">{datas.form}</p>
                                 </div>
                              </td>
                         </tr>
@@ -124,9 +126,10 @@ function LaLiga({league, season}) {
                     </tbody>
                 </table>
             </div>
+            <ScorersRank seasons={year} leagues={club}/>
+            <AssistsRank seasons={year} leagues={club} />
+            <CardsRank seasons={year} leagues={club} />
         </div>
-        <ScorersRank seasons={year} leagues={club}/>
-    </div>
     )
 }
 

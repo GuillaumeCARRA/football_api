@@ -3,15 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import LigueOne from './components/LigueOneRank';
-import WomenRank from './components/WomenRank';
 import PremierLeague from './components/PlRank';
 import Bundesliga from './components/BundesligaRank';
 import LaLiga from './components/LaLigaRank';
 import SerieA from './components/SerieARank';
 import PrimeiraLiga from './components/PrimeiraLigaRank';
-import AssistsRank from './components/AssistsRank';
-import YellowCardsRank from './components/YellowCardsRank';
-import RedCardsRank from './components/RedCardsRank'; 
+
 
 import './App.css';
 
@@ -20,10 +17,6 @@ function App() {
   /* LIGUE 1 */
   const [league, setLeague] = useState('61');
   const [season, setSeason] = useState('2022');
-
-  /* D1 FEMININE */
-  const [leagueW, setLeagueW] = useState('64');
-  const [seasonW, setSeasonW] = useState('2022');
 
   /* PREMIER LEAGUE */
   const [leagueP, setLeagueP] = useState('39');
@@ -58,15 +51,6 @@ function App() {
                 season={season} 
               /> 
             }
-          />
-          <Route 
-            exact path='/d1feminine' 
-            element={
-              <WomenRank 
-                league={leagueW}
-                season={seasonW}
-              />
-            } 
           />
           <Route 
             exact path='/premierleague' 

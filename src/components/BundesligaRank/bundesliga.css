@@ -1,13 +1,13 @@
-.ligueOne {
+.bundesliga {
     width: 100%;
     height: 80vw;
   }
   
-  .ligueOne__container{
+  .bundesliga__container{
     font-family: 'Poppins', sans-serif;
   } 
   
-  .ligueOne__title{
+  .bundesliga__title{
     display: flex;
     align-items: center;
     margin: 50px 0 50px 115px;
@@ -18,14 +18,14 @@
       border-radius: 5%;
   }
   
-  .ligueOne__group {
+  .bundesliga__group {
       margin-left: 20px;
       font-family: 'Poppins', sans-serif;  
       font-weight: 700;
       font-size: 2.2rem;
   }
   
-  .ligueOne__table {
+  .bundesliga__table {
       min-width: 88%;
       border-collapse: collapse;
       margin-left: auto;
@@ -33,7 +33,7 @@
       border: .5px solid #E8E8E8;
   }
   
-  .ligueOne__data {
+  .bundesliga__data {
       height: 60px;
       padding: 10px 20px;
       background-color: #7306c7;
@@ -43,24 +43,24 @@
   }
   
   
-  .ligueOne__standings {
+  .bundesliga_standings {
       width: 8rem;
       padding: 1rem 5rem .5rem 5rem;
       font-weight: 500;
       border-bottom: 1px solid #E8E8E8;
-    
+        
   }
   
-  .ligueOne__items {
+  .bundesliga__items {
       display: flex;
       align-items: center;
   }
   
-  .ligueOne__rank {
+  .bundesliga__rank {
       font-size: 1.2rem;
   }
   
-  .ligueOne__img {
+  .bundesliga__img {
       width: 100%;
       margin: auto auto 5px 30px;
   }

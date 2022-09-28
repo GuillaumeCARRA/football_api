@@ -1,33 +1,35 @@
-.scorersRank{
+.cardsRank{
     width: 100%;
     font-family: 'Poppins', sans-serif;
     margin-top: 150px;
-    
+  
 }
 
-.scorersRank__container {
+.cardsRank__container {
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
-.scorersRank__title {
+.cardsRank__title {
     display: flex;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 30px;
 }
 
-.scorersRank__table {
+.cardsRank__table {
     min-width: 88%; 
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
-.scorersRank__data {
+.cardsRank__data {
     height: 60px;
     padding: 10px 20px;
     background-color: #7306c7;
@@ -36,57 +38,53 @@
     text-transform: uppercase;
 }
 
-.scorersRank__standings {
-    padding: 1.2rem 4rem .5rem 4rem;
+.cardsRank__standings {
+    padding: 1.2rem 5.3rem .5rem 5.3rem;
     font-weight: 500;
     border-bottom: 2px solid #E8E8E8;
     font-size: 1.2rem;
 }
 
-.scorersRank__elements {
+.cardsRank__elements {
     display: flex;
     align-items: center;
 }
 
-.scorersRank__picture{
+.cardsRank__picture{
    width: 12rem;
    height: 8rem;
 }
 
-.scorersRank__img{
+.cardsRank__img{
     width: 65%;
     border-radius: 50%;
     border: 2px solid  #E8E8E8;
 }
 
-/* .scorersRank__info{
- 
-} */
-
-.scorersRank__descriptions{
+.cardsRank__descriptions{
     font-size: 1.05rem;
     font-weight: 700;
 }
 
-.scorersRank__rate{
+.cardsRank__rate{
     margin-top: 2rem;
     line-height: 1.5rem;
     font-weight: 400;
 }
 
-.scorersRank__rating{
+.cardsRank__rating{
     margin-left: 1rem;
     padding: .5rem .5rem .5rem .5rem;
     border-radius: 50%;
     border: 2px dashed #7306c7;
 }
 
-.scorersRank__team{
+.cardsRank__team{
     width: 4.5rem;
 }
 
-.scorersRank__goals{
+/* .cardsRank__yellow{
     font-weight: 700;
     color: #7306c7;
     font-size: 1.4rem;
-}
+} */

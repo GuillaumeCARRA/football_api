@@ -17,14 +17,6 @@ function NavBar() {
                         </li>
                         <li className="navbar__item">
                             <a
-                                href="/d1feminine"
-                                className="navbar__link"
-                            >
-                               D1 Féminine 
-                            </a>
-                        </li>
-                        <li className="navbar__item">
-                            <a
                                 href="/premierleague"
                                 className="navbar__link"
                             >
