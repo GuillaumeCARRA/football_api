@@ -9,7 +9,7 @@ function CardsRank({seasons, leagues}) {
     
     const option = {
         method: 'get',
-        url: `https://v3.football.api-sports.io/players/topassists?season=${seasons}&league=${leagues}`,
+        url: `https://v3.football.api-sports.io/players/topyellowcards?season=${seasons}&league=${leagues}`,
         headers: {
             'x-rapidapi-key': `5b9349fff44ec05a5ae1c6ff2986fe56`,
             'x-rapidapi-host': 'v3.football.api-sports.io'

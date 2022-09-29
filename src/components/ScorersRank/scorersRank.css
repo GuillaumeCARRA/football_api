@@ -34,6 +34,7 @@
     font-weight: 500;
     color: #ffffff;
     text-transform: uppercase;
+    
 }
 
 .scorersRank__standings {
@@ -41,6 +42,7 @@
     font-weight: 500;
     border-bottom: 2px solid #E8E8E8;
     font-size: 1.2rem;
+       
 }
 
 .scorersRank__elements {

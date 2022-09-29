@@ -17,6 +17,8 @@ function LigueOne({league, season}) {
     const [data, setData] = useState([]);
     console.log( data);
 
+    const [toggle, setToggle] = useState(true);
+
     const options = {
         method: 'get',
         url: `https://v3.football.api-sports.io/standings?league=${league}&season=${season}`,
@@ -56,9 +58,17 @@ function LigueOne({league, season}) {
                             <th className="ligueOne__data">db</th>
                             <th className="ligueOne__data">pts</th>
                             <th className="ligueOne__data">forme</th>
+                            <th className="ligueOne__data">
+                                <button 
+                                    className="ligueOne__close"
+                                    onClick={() => setToggle(!toggle)}
+                                >
+                                    fermer
+                                </button>
+                            </th>
                         </tr>
                     </thead>
-                    <tbody>
+                   {toggle && (<tbody>
                         {data.map((datas ) =>(
                             <tr key={datas.team.id}>
                             <td className="ligueOne__standings">
@@ -121,9 +131,13 @@ function LigueOne({league, season}) {
                                     <p className="ligueOne__info">{datas.form}</p>
                                 </div>
                              </td>
+                             <td className="ligueOne__standings">
+                                <div></div>
+                             </td>
                         </tr>
                         ))}
                     </tbody>
+                     )}
                 </table>
             </div>
             <ScorersRank seasons={year} leagues={club}/>
@@ -132,7 +146,5 @@ function LigueOne({league, season}) {
         </div>   
     )
 }
-
-
 
 export default LigueOne;
