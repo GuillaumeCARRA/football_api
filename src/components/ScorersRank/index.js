@@ -19,7 +19,6 @@ function ScorersRank({seasons, leagues}) {
 
     useEffect(() => {
         axios(option).then(function (response) {
-            console.log('data top scorers', response.data.response);
             setData(response.data.response);
         }).catch(function (error) {
             console.error(error);

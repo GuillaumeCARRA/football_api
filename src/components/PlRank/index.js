@@ -15,8 +15,7 @@ const [club, setClub] = useState('39');
 const [year, setYear] = useState('2022');
 
 const [data, setData] = useState([]);
-    console.log( data);
-
+  
 const [toggle, setToggle] = useState(true);
 
     const options = {
@@ -30,7 +29,6 @@ const [toggle, setToggle] = useState(true);
       
     useEffect(() => {
         axios(options).then(function (response) {
-            console.log('je suis la data', response.data.response[0].league.standings[0]);
             setData(response.data.response[0].league.standings[0])
         }).catch(function (error) {
             console.error(error);
