@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Icon } from 'semantic-ui-react';
 import axios from 'axios';
 
 import ScorersRank from '../../components/ScorersRank';
@@ -15,6 +16,8 @@ const [year, setYear] = useState('2022');
 
 const [data, setData] = useState([]);
     console.log( data);
+
+const [toggle, setToggle] = useState(true);
 
     const options = {
         method: 'get',
@@ -56,9 +59,28 @@ const [data, setData] = useState([]);
                         <th className="premierLeague__data">db</th>
                         <th className="premierLeague__data">pts</th>
                         <th className="premierLeague__data">forme</th>
+                        <th className="premierLeague__data">
+                            <button 
+                                className="premierLeague__close"
+                                onClick={() => setToggle(!toggle)}
+                            >
+                                {
+                                    toggle
+                                        ? <Icon 
+                                            name='close'
+                                            size='large'
+                                            
+                                        /> 
+                                        : <Icon 
+                                            name='soccer'
+                                            size='large'
+                                        />   
+                                }
+                            </button>
+                        </th>
                     </tr>
                 </thead>
-                <tbody>
+                {toggle && (<tbody>
                     {data.map((datas ) =>(
                         <tr key={datas.team.id}>
                         <td className="premierLeague__standings">
@@ -124,6 +146,7 @@ const [data, setData] = useState([]);
                     </tr>
                     ))}
                 </tbody>
+                )}
             </table>
         </div>
         <ScorersRank seasons={year} leagues={club}/>

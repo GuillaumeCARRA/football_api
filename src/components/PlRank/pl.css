@@ -41,6 +41,14 @@
       color: #ffffff;
       text-transform: uppercase;
   }
+
+  .premierLeague__close {
+    background-color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline-style: none;
+    color: inherit;
+  }
   
   
   .premierLeague__standings {

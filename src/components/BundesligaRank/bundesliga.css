@@ -42,6 +42,13 @@
       text-transform: uppercase;
   }
   
+  .bundesliga__close {
+    background-color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline-style: none;
+    color: inherit;
+}
   
   .bundesliga__standings {
       width: 8rem;

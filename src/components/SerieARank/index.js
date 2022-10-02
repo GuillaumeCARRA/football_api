@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Icon } from 'semantic-ui-react';
 import axios from 'axios';
 
 import ScorersRank from '../../components/ScorersRank';
@@ -14,6 +15,8 @@ function SerieA({league, season}) {
     
     const [data, setData] = useState([]);
     console.log( data);
+
+    const [toggle, setToggle] = useState(true);
 
     const options = {
         method: 'get',
@@ -54,9 +57,28 @@ function SerieA({league, season}) {
                         <th className="serieA__data">db</th>
                         <th className="serieA__data">pts</th>
                         <th className="serieA__data">forme</th>
+                        <th className="ligueOne__data">
+                            <button 
+                                className="ligueOne__close"
+                                onClick={() => setToggle(!toggle)}
+                            >
+                                {
+                                    toggle
+                                        ? <Icon 
+                                            name='close'
+                                            size='large'
+                                            
+                                        /> 
+                                        : <Icon 
+                                            name='soccer'
+                                            size='large'
+                                        />   
+                                }
+                            </button>
+                        </th>
                     </tr>
                 </thead>
-                <tbody>
+                {toggle && (<tbody>
                     {data.map((datas ) =>(
                         <tr key={datas.team.id}>
                         <td className="serieA__standings">
@@ -122,6 +144,7 @@ function SerieA({league, season}) {
                     </tr>
                     ))}
                 </tbody>
+                )}
             </table>
         </div>
         <ScorersRank seasons={year} leagues={club}/>

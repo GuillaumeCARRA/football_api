@@ -43,6 +43,14 @@
     text-transform: uppercase;   
 }
 
+.ligueOne__close {
+    background-color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline-style: none;
+    color: inherit;
+}
+
 .ligueOne__standings {
     width: 8rem;
     padding: 1rem 4rem .5rem 4rem;

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Icon } from 'semantic-ui-react';
 import axios from 'axios';
 
 import ScorersRank from '../../components/ScorersRank';
@@ -15,8 +16,7 @@ function LigueOne({league, season}) {
     const [year, setYear] = useState('2022');
    
     const [data, setData] = useState([]);
-    console.log( data);
-
+   
     const [toggle, setToggle] = useState(true);
 
     const options = {
@@ -30,10 +30,9 @@ function LigueOne({league, season}) {
       
     useEffect(() => {
         axios(options).then(function (response) {
-            console.log('je suis la data', response.data.response[0]);
             setData(response.data.response[0].league.standings[0]);
         }).catch(function (error) {
-            console.error(error);
+            console.error('error', error);
         });
     }, [])
     
@@ -63,7 +62,18 @@ function LigueOne({league, season}) {
                                     className="ligueOne__close"
                                     onClick={() => setToggle(!toggle)}
                                 >
-                                    fermer
+                                    {
+                                        toggle
+                                            ? <Icon 
+                                                name='close'
+                                                size='large'
+                                            
+                                            /> 
+                                            : <Icon 
+                                                name='soccer'
+                                                size='large'
+                                            />   
+                                    }
                                 </button>
                             </th>
                         </tr>
@@ -137,7 +147,7 @@ function LigueOne({league, season}) {
                         </tr>
                         ))}
                     </tbody>
-                     )}
+                    )}
                 </table>
             </div>
             <ScorersRank seasons={year} leagues={club}/>
