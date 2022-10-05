@@ -1,5 +1,5 @@
 [[redirects]]
-from = "/bundesliga"
+from = "/*"
 to = "/bundesliga"
 status = 200
 
