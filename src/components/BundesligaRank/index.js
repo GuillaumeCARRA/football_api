@@ -33,6 +33,7 @@ function Bundesliga({league, season}) {
             setData(response.data.response[0].league.standings[0])
         }).catch(function (error) {
             console.error(error);
+            alert('Vous avez dépassé le quota de requête, désolé...');
         });
     }, [])
 
