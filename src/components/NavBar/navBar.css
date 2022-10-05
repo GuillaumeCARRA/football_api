@@ -19,7 +19,6 @@
 .navbar__item {
     /* top | right | bottom | left */
     margin: 10px 0 0 50px;
-    
 }
 
 .navbar__link {
@@ -34,4 +33,10 @@ a.navbar__link:hover{
     color: #fefee2;  
     transform: scale(1.1);
     font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 960px) {
+    
 }
