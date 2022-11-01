@@ -31,6 +31,7 @@ function LigueOne({league, season}) {
     useEffect(() => {
         axios(options).then(function (response) {
             setData(response.data.response[0].league.standings[0]);
+            
         }).catch(function (error) {
             console.error('error', error);
             alert('Vous avez dépassé le quota de requête, désolé...');
@@ -142,9 +143,9 @@ function LigueOne({league, season}) {
                                     <p className="ligueOne__info">{datas.form}</p>
                                 </div>
                              </td>
-                             <td className="ligueOne__standings">
+                            <td className="ligueOne__standings">
                                 <div></div>
-                             </td>
+                            </td>
                         </tr>
                         ))}
                     </tbody>

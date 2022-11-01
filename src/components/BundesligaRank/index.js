@@ -143,6 +143,9 @@ function Bundesliga({league, season}) {
                                 <p className="bundesliga__info">{datas.form}</p>
                             </div>
                          </td>
+                        <td className="bundesliga__standings">
+                            <div></div>
+                        </td>
                     </tr>
                     ))}
                 </tbody>

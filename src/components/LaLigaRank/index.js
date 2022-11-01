@@ -141,7 +141,10 @@ function LaLiga({league, season}) {
                                 <div>
                                     <p className="laLiga__info">{datas.form}</p>
                                 </div>
-                             </td>
+                            </td>
+                            <td className="laLiga__standings">
+                                <div></div>
+                            </td>
                         </tr>
                         ))}
                     </tbody>

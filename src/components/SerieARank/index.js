@@ -28,6 +28,7 @@ function SerieA({league, season}) {
       
     useEffect(() => {
         axios(options).then(function (response) {
+            console.log(response);
             setData(response.data.response[0].league.standings[0])
         }).catch(function (error) {
             console.error(error);
@@ -139,7 +140,10 @@ function SerieA({league, season}) {
                             <div>
                                 <p className="serieA__info">{datas.form}</p>
                             </div>
-                         </td>
+                        </td>
+                        <td className="serieA__standings">
+                            <div></div>
+                        </td>
                     </tr>
                     ))}
                 </tbody>

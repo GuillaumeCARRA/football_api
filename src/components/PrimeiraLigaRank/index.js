@@ -141,7 +141,10 @@ function PrimeiraLiga({league, season}) {
                             <div>
                                 <p className="primeiraLiga__info">{datas.form}</p>
                             </div>
-                         </td>
+                        </td>
+                        <td className="primeiraLiga__standings">
+                            <div></div>
+                        </td>
                     </tr>
                     ))}
                 </tbody>

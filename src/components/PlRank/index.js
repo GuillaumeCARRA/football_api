@@ -142,6 +142,9 @@ const [toggle, setToggle] = useState(true);
                                 <p className="premierLeague__info">{datas.form}</p>
                             </div>
                          </td>
+                        <td className="premierLeague__standings">
+                            <div></div>
+                        </td>
                     </tr>
                     ))}
                 </tbody>
